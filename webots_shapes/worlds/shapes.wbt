@@ -1,0 +1,62 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/BrushedAluminium.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.1730656936921603 0.17350115734810348 0.9695079236735097 1.599262442756947
+  position -0.004865483338649305 -2.747274014307577 0.5613106697507078
+}
+TexturedBackground {
+  texture "dawn_cloudy_empty"
+  luminosity 3
+  skyColor [
+    1 0.5 1
+  ]
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0 0 -0.15
+  floorSize 3 3
+  floorAppearance Parquetry {
+    colorOverride 0 0 0
+    IBLStrength 0.3
+  }
+  wallThickness 0.1
+  wallHeight 0.05
+  wallAppearance BrushedAluminium {
+    colorOverride 0 1 1
+  }
+}
+DEF sphere Shape {
+  appearance PBRAppearance {
+    baseColor 0.666667 1 1
+    transparency 0.005
+  }
+  geometry Sphere {
+    radius 0.155
+    subdivision 5
+  }
+}
+DEF box Shape {
+  appearance Appearance {
+    material Material {
+      diffuseColor 0.8 0.7 0.3
+      shininess 0.5
+    }
+    texture ImageTexture {
+      url [
+        "../../1_xK4WrbLxaRmbXdjktpObNA.jpg"
+      ]
+    }
+  }
+  geometry Box {
+    size 0.3 0.3 0.03
+  }
+}
